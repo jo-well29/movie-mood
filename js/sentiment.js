@@ -1,5 +1,6 @@
 const url = 'https://api.themoviedb.org/3/search/movie?api_key=44190c5b396af3a1c89a1295b6b1e434&query=Jack+Reacher';
 
+
 async function checkSentiment() {
     
     let response = await fetch(url);
