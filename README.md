@@ -62,7 +62,7 @@ ___
 Developer: Caston Boyd
 
 * [LinkedIn: Caston Boyd](https://www.linkedin.com/in/castonboyd/)
-* [Github: CLeeBenjamin](https://github.com/CLeeBenjamin))
+* [Github: CLeeBenjamin](https://github.com/CLeeBenjamin)
 ___
 
 Thank you 😀!
