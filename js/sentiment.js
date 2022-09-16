@@ -1,11 +1,56 @@
-const url = 'https://api.themoviedb.org/3/search/movie?api_key=44190c5b396af3a1c89a1295b6b1e434&query=Jack+Reacher';
+const url = 'https://api.themoviedb.org/3/movie/now_playing?api_key=44190c5b396af3a1c89a1295b6b1e434&language=en-US&page=1';
 
 
-async function checkSentiment() {
-    
+
+
+const movieResponseHelp = (mood, array) => { 
+       return Math.floor(Math.random() * array);
+}
+
+
+
+export default async function movieReponse(mood) {
+    let negativeMovies = [];
+    let positiveMovies = [];
+    let neutralMovies = [];
     let response = await fetch(url);
-    let json = await response.json();
-    let data = await json.results[0].overview;
+    let json = await response.json()
+    await Promise.all(json.results.map(async e => {
+       let movieObj = await e;
+       let data = await e.overview;
+       let sentiment = await urlInfo(data);
+       if(sentiment === "positive"){
+            positiveMovies.push(movieObj);
+       }
+       else if(sentiment === "negative"){
+            negativeMovies.push(movieObj);
+       }
+       else if(sentiment === "neutral"){
+            neutralMovies.push(movieObj);
+       }
+    } ));  
+    let randMovieIndx;
+    if(mood === "happy"){
+        
+        randMovieIndx = movieResponseHelp(mood, positiveMovies.length);
+        return positiveMovies[randMovieIndx]
+    }
+    else if(mood === "okay"){
+        randMovieIndx = movieResponseHelp(mood, neutralMovies.length);
+        return neutralMovies[randMovieIndx]
+    }
+
+    else if(mood === "mad"){
+        randMovieIndx = movieResponseHelp(mood, negativeMovies.length);
+        return negativeMovies[randMovieIndx]
+    }
+    
+}
+
+
+
+
+async function urlInfo(data) {
     const encodedParams = new URLSearchParams();
     encodedParams.append("text", data);
     const options = {
@@ -19,9 +64,26 @@ async function checkSentiment() {
     };
 
     let sentimentResponse = await fetch('https://text-sentiment.p.rapidapi.com/analyze', options)
-	let sentimentInfo = await sentimentResponse.json();
-	console.log(sentimentInfo)
-    
+    let sentimentInfo = await sentimentResponse.json();
+
+    for (const property in sentimentInfo) {
+        if(property === "neg_percent"){
+            if(parseFloat(sentimentInfo[property])/100 > .5){
+                return "negative";
+            }
+        }
+        if(property === "pos_percent"){
+            if(parseFloat(sentimentInfo[property])/100 > .5){
+                return "positive";
+            }
+        }
+        if(property === "mid_percent"){
+            if(parseFloat(sentimentInfo[property])/100 > .5){
+                return "neutral";
+            }
+        }
+        
+      }
 }
 
-checkSentiment();
+
