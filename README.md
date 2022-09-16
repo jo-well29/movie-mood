@@ -44,8 +44,7 @@ ___
 
 Product Manager: Ana Reyes
 
-* [LinkedIn:](https://developers.themoviedb.org/4/getting-started/authorization)
-* [Github:](https://developers.themoviedb.org/4/getting-started/authorization)
+* [LinkedIn: Ana Reyes](https://www.linkedin.com/in/anavreyes/)
 
 ___
 
