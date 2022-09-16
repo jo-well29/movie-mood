@@ -1,13 +1,8 @@
 const url = 'https://api.themoviedb.org/3/movie/now_playing?api_key=44190c5b396af3a1c89a1295b6b1e434&language=en-US&page=1';
 
-
-
-
 const movieResponseHelp = (mood, array) => { 
        return Math.floor(Math.random() * array);
 }
-
-
 
 export default async function movieReponse(mood) {
     let negativeMovies = [];
@@ -44,10 +39,7 @@ export default async function movieReponse(mood) {
         randMovieIndx = movieResponseHelp(mood, negativeMovies.length);
         return negativeMovies[randMovieIndx]
     }
-    
 }
-
-
 
 
 async function urlInfo(data) {

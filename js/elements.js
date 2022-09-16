@@ -6,6 +6,10 @@ const searchInput = document.querySelector("input");
 const movieImage = document.querySelector("img");
 const movieTitle = document.getElementById("movie_title");
 const movieOverview = document.getElementById("movie_overview");
+const overviewLabel = document.getElementById("overview");
+
+/// Updates/Modify Elements 
+overviewLabel.innerText = "";
 
 /// Events 
 async function printSomething(e) {
@@ -17,7 +21,7 @@ async function printSomething(e) {
         let mvImage =  `https://image.tmdb.org/t/p/w500${newValue.backdrop_path}`
         let mvOverview = newValue.overview;
 
-
+        overview.innerText = "Overview"
         movieImage.src = mvImage;
         movieTitle.innerText = mvTitle;
         movieOverview.innerText = mvOverview;

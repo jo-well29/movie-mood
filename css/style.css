@@ -1,8 +1,13 @@
 body {
   font: 14px "Lato", Arial, sans-serif;
-  min-width: 100%;
-  min-height: 100%;
-  color: #666;
+  height: 50vh;
+  background-image: radial-gradient(circle, #002244, #00466a, #006c85, #009290, #36b88d);
+}
+
+
+
+page {
+  height: 100vh;
 }
 
 :focus {
@@ -10,22 +15,34 @@ body {
 }
 
 col {
-  width: 10%;
-  margin: 40px 3%;
+  width: 100%;
+  
+
 }
 
 input[type="text"] {
-  font: 15px/24px "Lato", Arial, sans-serif;
-  color: #333;
-  width: 10%;
+  font: 30px/30px "Lato", Arial, sans-serif;
+  
+  width: 10rem;
+  
+  font-size: 50px;
+  color: white;
+  text-shadow: 0 0 8px white;
   box-sizing: border-box;
   letter-spacing: 1px;
 }
 
 .effect-1 {
   border: 0;
-  padding: 7px 0;
-  border-bottom: 1px solid #ccc;
+  padding: 0px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);;
+  background: transparent;
+  margin: auto;
+  position: relative;
+  display: block;
+  width: 200px;
+  margin-top: 25px;
+  
 }
 
 .effect-1~.focus-border {
@@ -50,5 +67,39 @@ input[type="text"] {
   display: flex;
   justify-content: center;
   margin: auto;
-  margin-top: 10rem;
+  margin-top: 2rem;
+  background: transparent;
+
+}
+
+
+h1{
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-bottom: 0px;
+  color: white;
+  text-shadow: 0 0 8px white;
+  margin-top: 50px;
+}
+
+h2{
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-bottom: 0px;
+  color: white;
+  text-shadow: 0 0 8px white;
+  margin-top: 20px;
+}
+
+p{
+  font-size: medium;
+  text-shadow: 0 0 8px white;
+  width: 300px;
+  margin: auto;
+  position: relative;
+  display: block;
+  margin-top: 10px;
+  
 }
