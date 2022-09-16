@@ -12,7 +12,14 @@ const overviewLabel = document.getElementById("overview");
 overviewLabel.innerText = "";
 
 /// Events 
-async function printSomething(e) {
+
+/**
+ * eventhandler: updates the dom with a keypress.
+ *
+ * @param {object} e takes an event object.
+ * @return {} returns nothing.
+ */
+async function renderUIComponents(e) {
     // e.preventDefault();
     if(e.key === "Enter"){
         let value = e.target.value;
@@ -32,4 +39,4 @@ async function printSomething(e) {
 }
 
 /// EventListeners 
-searchInput.addEventListener("keypress",printSomething)
+searchInput.addEventListener("keypress",renderUIComponents)

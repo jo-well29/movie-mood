@@ -4,8 +4,6 @@ body {
   background-image: radial-gradient(circle, #002244, #00466a, #006c85, #009290, #36b88d);
 }
 
-
-
 page {
   height: 100vh;
 }
@@ -42,6 +40,7 @@ input[type="text"] {
   display: block;
   width: 200px;
   margin-top: 25px;
+ 
   
 }
 
@@ -91,12 +90,13 @@ h2{
   color: white;
   text-shadow: 0 0 8px white;
   margin-top: 20px;
+  text-decoration: underline;
 }
 
 p{
   font-size: medium;
   text-shadow: 0 0 8px white;
-  width: 300px;
+  width: 400px;
   margin: auto;
   position: relative;
   display: block;

@@ -1,9 +1,24 @@
+/// API URL
 const url = 'https://api.themoviedb.org/3/movie/now_playing?api_key=44190c5b396af3a1c89a1295b6b1e434&language=en-US&page=1';
 
-const movieResponseHelp = (mood, array) => { 
-       return Math.floor(Math.random() * array);
+
+/**
+ * returns a random number from the range passed as an arugment.
+ *
+ * @param {number} nums number range.
+ * @return {number} random number.
+ */
+const movieResponseHelp = (nums) => { 
+       return Math.floor(Math.random() * nums);
 }
 
+
+/**
+ * returns a movie object.
+ *
+ * @param {number} mood takes a string.
+ * @return {object} returns a movie object.
+ */
 export default async function movieReponse(mood) {
     let negativeMovies = [];
     let positiveMovies = [];
@@ -27,21 +42,26 @@ export default async function movieReponse(mood) {
     let randMovieIndx;
     if(mood === "happy"){
         
-        randMovieIndx = movieResponseHelp(mood, positiveMovies.length);
+        randMovieIndx = movieResponseHelp(positiveMovies.length);
         return positiveMovies[randMovieIndx]
     }
     else if(mood === "okay"){
-        randMovieIndx = movieResponseHelp(mood, neutralMovies.length);
+        randMovieIndx = movieResponseHelp(neutralMovies.length);
         return neutralMovies[randMovieIndx]
     }
 
     else if(mood === "mad"){
-        randMovieIndx = movieResponseHelp(mood, negativeMovies.length);
+        randMovieIndx = movieResponseHelp(negativeMovies.length);
         return negativeMovies[randMovieIndx]
     }
 }
 
-
+/**
+ * returns a string.
+ *
+ * @param {string} mood takes a string.
+ * @return {string} returns a string.
+ */
 async function urlInfo(data) {
     const encodedParams = new URLSearchParams();
     encodedParams.append("text", data);
@@ -75,7 +95,7 @@ async function urlInfo(data) {
             }
         }
         
-      }
+    }
 }
 
 
