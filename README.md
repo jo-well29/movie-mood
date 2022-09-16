@@ -53,8 +53,8 @@ ___
 
 Developer: Jowel Rosario
 
-* [LinkedIn:](https://developers.themoviedb.org/4/getting-started/authorization)
-* [Github:](https://developers.themoviedb.org/4/getting-started/authorization)
+* [LinkedIn: Jowel Rosario](https://www.linkedin.com/in/jowel-rosario/)
+* [Github: jo-well29](https://github.com/jo-well29)
   
 ___
 
