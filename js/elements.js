@@ -27,8 +27,5 @@ async function printSomething(e) {
     
 }
 
-
+/// EventListeners 
 searchInput.addEventListener("keypress",printSomething)
-
-
-// printSomething()
