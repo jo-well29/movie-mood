@@ -61,8 +61,8 @@ ___
 
 Developer: Caston Boyd
 
-* [LinkedIn:]([https://developers.themoviedb.org/4/getting-started/authorization](https://www.linkedin.com/in/castonboyd/)
-* [Github:]([https://developers.themoviedb.org/4/getting-started/authorization](https://github.com/CLeeBenjamin))
+* [LinkedIn: Caston Boyd](https://www.linkedin.com/in/castonboyd/)
+* [Github: CLeeBenjamin](https://github.com/CLeeBenjamin))
 ___
 
 Thank you 😀!
