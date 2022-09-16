@@ -31,7 +31,7 @@ ___
 * User is presented with 1 movie that matches the mood.
 * Movies are labeled with a mood by using a text sentinment analysis API.
   
-__
+___
 
 ***Quick Demo:***
 
@@ -44,8 +44,8 @@ ___
 
 Product Manager: Ana Reyes
 
-* LinkedIn
-* Github
+* [LinkedIn:](https://developers.themoviedb.org/4/getting-started/authorization)
+* [Github:](https://developers.themoviedb.org/4/getting-started/authorization)
 
 ___
 
@@ -53,8 +53,8 @@ ___
 
 Developer: Jowel Rosario
 
-* LinkedIn
-* Github
+* [LinkedIn:](https://developers.themoviedb.org/4/getting-started/authorization)
+* [Github:](https://developers.themoviedb.org/4/getting-started/authorization)
   
 ___
 
@@ -62,8 +62,8 @@ ___
 
 Developer: Caston Boyd
 
-* LinkedIn
-* Github
+* [LinkedIn:]([https://developers.themoviedb.org/4/getting-started/authorization](https://www.linkedin.com/in/castonboyd/)
+* [Github:]([https://developers.themoviedb.org/4/getting-started/authorization](https://github.com/CLeeBenjamin))
 ___
 
 Thank you 😀!
